@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            height: 500px;
+            background-color: aliceblue;
+           
+            
+            /* 1.普通方法 */
+            /* overflow: hidden; */
+            
+            /* 2.定位 */
+            /* position: relative; */
+
+            /* 3.强行转换成行里元素 */
+            /* text-align: center;
+            line-height: 500px; */
+
+            /* 4.开启弹性盒子布局 */
+            /* display: flex; */
+
+            /* 5.还可以使用calc(100vh) 100%视口的大小 */
+           
+
+        }
+        .outer .div1 {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(170, 211, 197);
+            border: 1px solid black;
+            /* 普通 */
+            /* margin: 200px auto; */
+
+            /* 定位 */
+            /* position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto; */
+
+            /* 这里好像只能转换成 行内元素 才行，而且还把块弄掉了 */
+            /* display: inline; */
+
+            /* 如果正常情况，此元素只会左右居中，但是因为开启了弹性盒子；所以上下默认是按照“结余的方式”留出上下的空虚 */
+            /* margin: auto; */
+
+        }
+ 
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="div1">1</div>
+        <!-- <div class="div2">2</div> -->
+    </div>
+</body>
+</html>

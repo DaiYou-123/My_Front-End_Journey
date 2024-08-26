@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <style>
+        
+     .main {
+          /* height: calc(100vh); */
+          text-align: center;
+          line-height: calc(100vh);
+
+     }
+     h1 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+          padding: 0 20px;
+          font-size: 6em;
+          color: #ff005b;
+          color: #fff;
+          /* 先在文字周围生成集中度较高的阴影效果*/
+          text-shadow: 0 0 20px #ff005b;
+          
+          font-size: 16em;
+          /* color: #ff005b;
+          filter: blur(15px); */
+     }
+     
+      h1::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0;
+          padding: 0 20px;
+
+          /* 然后在文字周围生成弥散度较高的阴影效果*/
+          /* 
+          将文字的颜色设置为与文字阴影相同的颜色，并且设置较高的模糊(blur)值：相当于
+          以文字和文字轮廓为参考，生成一个弥散的模糊光线效果
+          */
+          color: #ff005b;
+          z-index: -1;
+          filter: blur(15px);
+      }
+      h1::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          /* 最后在文字底部和周围添加一层模糊的淡淡的环绕光 */
+          background-color: #ff005b;
+          opacity: 0.5;
+          filter: blur(40px);
+          z-index: -2;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+       <h1>Neon_Light</h1>
+    </div>
+</body>
+</html>

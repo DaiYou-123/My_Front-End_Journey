@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+        p.word_ha {
+        color: antiquewhite;
+        }
+        p.word_xi {
+            color: aquamarine;
+        }
+        #word_title {
+            /* #和.不能同时使用 */
+            color: blue;
+        }
+
+        /* .word_ha.word_xi {
+            color: brown;
+            这个写法是错误的，这是并集选择不是交集
+            只能选择一个元素 如 class=“word_ha word_xi” 这样包含两个类名的 一个指代元素
+        } */
+        
+   </style>
+
+</head>
+<body>
+    <h1 id="word_title">欢迎！来到前端</h1>
+
+    <h2 id="some_word" class="word_h2">这是一些字</h2>
+    <p class="word_ha">哈哈哈哈哈哈哈</p>
+
+    <h2 class="word_h2">这也是一些字</h2>
+    <p class="word_xi">嘻嘻嘻嘻嘻嘻</p>
+</body>
+</html>

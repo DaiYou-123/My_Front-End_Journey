@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写封装防抖</title>
+</head>
+<body>
+    <!-- // 模拟一个输入框 -->
+    <input type="text">
+    
+    <script>
+        let inp = document.querySelector("input");
+        // 当我们要面临复杂的业务逻辑时，需要对函数进行封装，以下为对防抖的封装
+        inp.oninput = debounce(function(){ 
+            console.log(this.value); // 完成一次执行
+        },1000);
+        
+        // 步骤1 将timer放入函数，以闭包的形式返回函数功能，oninput执行返回后的函数
+        // function debounce(){
+        //     let timer = null; // 定时器
+        //     return function() {
+        //         if(timer !== null){ 
+        //             clearTimeout(timer);// 若再次调用 清除定时器，定时器重新开启定时
+        //         }
+        //         timer = setTimeout(()=>{
+        //                 // 完成调用的业务逻辑的一次执行
+        //         },1000)
+        //     }
+        // }
+        // 步骤2 将需要执行的函数以fn形式进行调用,以变量形式传递执行的delay
+        // function debounce(fn,delay){
+        //     let timer = null; // 定时器
+        //     return function() {
+        //         if(timer !== null){ 
+        //             clearTimeout(timer);// 若再次调用 清除定时器，定时器重新开启定时
+        //         }
+        //         timer = setTimeout(()=>{
+        //             fn();    // 完成调用的业务逻辑的一次执行
+        //         },delay)
+        //     }
+        // }
+        // 步骤3 此时由于this的指向window，所以值为undefined，使用call替换oninput里fn的指针
+        function debounce(fn,delay){
+            let timer = null; // 定时器
+            return function() {
+                if(timer !== null){ 
+                    clearTimeout(timer);// 若再次调用 清除定时器，定时器重新开启定时
+                }
+                timer = setTimeout(()=>{
+                    fn.call(this);// 完成调用的业务逻辑的一次执行
+                },delay)
+            }
+        } 
+
+    </script>
+</body>
+</html>

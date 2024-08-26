@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <style>
+        .main {
+            width: 100%;
+            height: calc(100vh);
+            position: relative;
+            background-color: rgb(40, 36, 36);
+        }
+       .content {
+            width: 640px;
+            height: 383px;
+            /* background-image: url(./split-image.jpg); */
+            background-size: contain ;
+            background-repeat: no-repeat;
+            
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: aliceblue;
+
+            text-align: center;
+            
+            background-color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+       }
+       .content::before {
+            content: "";
+            width: 50%;
+            height: 100%;
+            background-image: url(./split-image.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: bottom;
+            
+       }
+       .content::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            /* background-color: rgb(32, 185, 185); */
+            background-image: url(./split-image.jpg);
+            background-repeat: no-repeat;
+            background-position: -320px;
+            transform-origin: top;
+       }
+       .content:hover::before {
+            transform: rotateX(90deg) translateY(50%);
+            transition: 0.5s linear all;
+       }
+       .content:hover::after {
+            transform: rotateX(90deg) translateY(-50%);
+            transition: 0.5s linear all;
+       }
+       .content h2 {
+            font-size: 4em;
+            color: white;
+       }
+       .content p {
+            font-size: 2em;
+            color: white;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <h2>Split image on Hover</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
+              praesentium cum optio in reprehenderit eaque quibusdam voluptatem
+              accusamus, quae placeat odio facere architecto fuga facilis
+              consequatur dignissimos. Perspiciatis, voluptatem esse?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

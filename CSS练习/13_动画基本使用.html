@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    /* 定义动画的运动方式 */
+    @keyframes right {
+        0% {
+
+        }
+        50% {
+            background-color: aqua;
+        }
+        100% {
+            transform: translate(500px) rotate(360deg);
+            border-radius: 50%;
+            background-color: aqua;
+        }
+    }
+    .outer {
+        width: 600px;
+        height: 100px;
+        background-color: aliceblue;
+        border: 1px solid ;
+    }
+    .inner {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(17, 64, 48);
+        /* 基本步骤 */
+        /* 在元素内部引入动画名 */
+        animation-name: right;
+        /* 设置动画运行时间 */
+        animation-duration: 2s;
+        /* 设置动画开始延迟、避免动画刚开始的跳跃 */
+        animation-delay: 0.5s;
+
+        /* 其他属性 */
+        /* 设置动画运动类型 linear...steps(20)很多*/
+        animation-timing-function: linear;
+
+        /* 动画循环和初始运动方向 配合使用*/
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        /* 动画播放状态 运动/暂停 */
+        animation-play-state: running;
+        
+    }
+    .inner:hover {
+        animation-play-state: paused;
+    }
+</style>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

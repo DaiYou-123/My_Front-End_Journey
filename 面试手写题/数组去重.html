@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写数组去重</title>
+</head>
+<body>
+    <script>
+        // 方法一：set
+        function unique_array_1(array){
+            const uniqueArray = [...new Set(array)]; // new新建一个set，由于set的特性，里面的元素已经完成去重，后使用扩展运算符将set转换为数组 
+            return uniqueArray;
+        }
+
+        // 方法二：filter过滤
+        function unique_array_2(array){
+            const uniqueArray = array.filter((item,index)=>{ // 元素 索引
+                return array.indexOf(item) == index // indexOf判断当前值是不是第一次等于 index
+            });
+            return uniqueArray;
+        }
+
+
+        const rand_data = [];
+        for(i = 0; i<10; i++){
+            rand_data.push( Math.floor(Math.random(10)*10)); // 生成0~10之间的小数  向下取整
+        }
+
+        console.log("原始数据:",rand_data);
+        console.log("去重后数据：",unique_array_1(rand_data)); 
+        console.log("去重后数据：",unique_array_2(rand_data)); 
+
+        // 应用场景：1.后端数据获取时可能遇到重复数据，所以需要去重，保持数据的唯一性
+                 // 2.用户输入，用户在表单中输入多个值时，可能会输入重复的值
+                 // 3.管理标签（tags）或分类（categories）时，可能会有重复的标签。手写数组去重可以帮助维护一个唯一的标签列表。
+    </script>
+</body>
+</html>

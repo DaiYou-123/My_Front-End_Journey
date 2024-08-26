@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+      /* ：first_child 不是由父亲元素直接找查他的第一个孩子，而是用 空格/> 导入到孩子元素中，由孩子元素选择它自己兄弟元素的第一个--结构一*/
+    /* div>p:first-child {
+        color: bisque;
+        font-size: 20px;
+    } */
+     
+    /* 这段结构没有指定p的父亲，所以默认全部结构中第一个孩子元素p都可以被标记--结构一*/
+    p:first-child {
+        color: brown;
+    }
+    /* 结构二 */
+    .rank_div>p:last-child {
+        color: aquamarine;
+        font-size: 10px;
+    }
+    .rank_div>p:nth-child(-n + 5) {
+        color: blue;
+    }
+    .rank_div>p:first-of-type {
+        color: cadetblue;
+    }
+    .rank_div>p:last-of-type {
+        color: cadetblue;
+    }
+    .rank_div>p:nth-of-type(-n+5) {
+        color: cadetblue;
+    }
+
+    /* 结构三 */
+    .rank_div_last>p:nth-last-child(2) {
+        color: aquamarine;
+        font-size: 40px;
+    }
+    .rank_div_last>p:nth-last-of-type(2) {
+        color: aquamarine;
+        font-size: 40px;
+    }
+    span:only-child {
+        color: rgb(222, 149, 32);
+        font-size: 40px;
+    }
+    .rank_div_last > span:only-of-type {
+        color: rgb(222, 149, 32);
+        font-size: 40px;
+    }
+
+   </style>
+
+</head>
+<body>
+    <!-- 结构一 -->
+    <p>名字：成绩</p>
+    <div>
+        <p>张三：98</p>
+        <p>李四：88</p>
+        <p>王五：95</p>
+        <div>
+            <p>赵六：90</p>
+        </div>
+    </div>
+
+    <hr>
+    <!-- 结构二 -->
+    <div class="rank_div">
+        <span>干扰第一个</span>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p>第9个</p>
+        <p>第10个</p>
+    </div>
+    <hr>
+    <div>
+        <span>干扰第一个</span>
+    </div>
+ 
+    <!-- 结构三 -->
+    <div class="rank_div_last">
+        <span>干扰第一个</span>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p>第9个</p>
+        <p>第10个</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局</title>
+</head>
+<body>
+    <div class="title">三栏布局</div>
+    <div class="content">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="middle"></div>
+    </div>
+    <style>
+        /* 方法一：两边使用 float，中间使用 margin（两边固定宽度，中间宽度自适应） */
+        /* .content{
+            margin: 0 100px;
+            padding: 0 100px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 1600px;
+        }
+        .left{
+            float: left;
+            background-color: aliceblue;
+            width: 20%;
+            height: 800px;
+        }
+        .middle{
+            background-color: aquamarine;
+            margin: 0 20%;
+            height: 800px;
+        }
+        .right{
+            float: right;
+            background-color: antiquewhite;
+            width: 20%;
+            height: 800px;
+        } */
+        .content{
+            margin: 0 0px;
+            padding: 0 50px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 1600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .title{
+            width: 100%;
+            font-size: 50px;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .left{
+            background-color: aliceblue;
+            width: 30%;
+            height: 800px;
+        }
+        .middle{
+            width: 30%;
+            background-color: aquamarine;
+            height: 800px;
+        }
+        .right{
+            background-color: antiquewhite;
+            width: 30%;
+            height: 800px;
+        }
+      
+    </style>
+</body>
+</html>

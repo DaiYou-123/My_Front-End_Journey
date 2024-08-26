@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写封装后的节流函数</title>
+    <style>
+        body{height: 2000px;}
+    </style>
+</head>
+<body>
+    <script>
+        window.onscroll = throttle(()=>{
+            console.log("123");
+        },500)
+
+        function throttle(fn,dalay){
+            let scroll_flag = true;
+            return function(){
+            // settimeout是异步执行的，在执行过程中，如果触发滚动事件，flag会一直为false，直到异步的定时器完成，将结果执行
+            // 此时如果不触发/再次触发滚动， flag都会为true
+            if(scroll_flag == true){
+                setTimeout(()=>{
+                   fn.call(this);
+                   scroll_flag = true;
+                },dalay)
+            }
+            scroll_flag = false;
+            }
+        }
+    </script>
+</body>
+</html>

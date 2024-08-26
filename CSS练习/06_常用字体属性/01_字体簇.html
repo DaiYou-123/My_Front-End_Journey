@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+        body {
+            font-size: 10px;
+        }
+        div p:nth-of-type(1) {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            height: 100px;
+            line-height: 100px;
+        }
+        /* 衬线字体与非衬线字体 */
+        div p:nth-of-type(2) {
+            /* 衬线 */
+            font-family: "微软雅黑";
+        }
+        div p:nth-of-type(3) {
+            font-family: "楷体";
+        }
+        div p:nth-of-type(4) {
+            /* 非衬线 */
+            font-family: "翩翩体-简","华文彩云",sans-serif;
+        }
+        div p:nth-of-type(5) {
+            /* 复合写法 有顺序！！！ */
+            font: bold italic 100px "华文彩云", "微软雅黑", sans-serif;
+        }
+        a {
+            /* 控制样式 */
+            text-decoration: underline wavy red ;
+        }
+   </style>
+    
+</head>
+<body>
+    <!-- 结构三 -->
+    <div>hhhhhhhh</div>
+    <div class="rank_div_last">
+        <span>干扰第一个</span>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p class="last_two" title="two_last">第9个</p>
+        <p class="last_two" >第10个</p>
+        <hr>
+
+        <!-- UI伪类 -->
+        <input type="text" placeholder="请输入">
+        <input type="text" disabled>
+        <input type="checkbox">
+        <a href="www">hhhhhhhh</a>
+    </div>
+</body>
+</html>

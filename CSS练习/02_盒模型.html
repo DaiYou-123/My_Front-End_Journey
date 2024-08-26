@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            /* 怪异盒模型 */
+            box-sizing: content-box;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(160, 198, 231);
+            border: 50px solid rgb(149, 106, 193);
+            padding: 50px ;
+            /* 配合使用 */
+            resize: both;
+            overflow: hidden;
+
+            box-shadow: 10px 10px 10px red;
+            /* 为整个元素添加 */
+            opacity: 0.5;
+        }
+        .div2 {
+            /* 怪异盒模型 */
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            background-color: rgb(44, 103, 154);
+            border: 50px solid;
+            padding: 50px ;
+               /* 配合使用 */
+            resize: both;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>

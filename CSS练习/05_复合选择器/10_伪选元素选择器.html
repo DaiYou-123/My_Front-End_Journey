@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+    /* div::first-letter {
+        color: aqua;
+        font-size: 30px;
+    }
+    div::first-line {
+        color: aquamarine;
+    } */
+    /* 用不了！！！！ */
+    div::selection {
+        color: rgb(31, 200, 12);
+        /* font-size: 40px; */
+        background-color: #b63636;
+    }
+    input::placeholder  {
+        color: blue;
+    }
+
+    body {
+        font-size: 30px;
+    }
+    /* % chrome 最小12 默认是16/18px */
+    div p:first-of-type {
+        font-size: 20px;
+    }
+   </style>
+    
+</head>
+<body>
+    <!-- 结构三 -->
+    <div>hhhhhhhh</div>
+    <div class="rank_div_last">
+        <span>干扰第一个</span>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p class="last_two" title="two_last">第9个</p>
+        <p class="last_two" >第10个</p>
+        <hr>
+
+        <!-- UI伪类 -->
+        <input type="text" placeholder="请输入">
+        <input type="text" disabled>
+        <input type="checkbox">
+    </div>
+</body>
+</html>

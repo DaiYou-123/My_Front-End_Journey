@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视觉滚动</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    body
+    {
+        background: #0a2a43;
+        min-height: 1500px;
+    }
+    .content {
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .content img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover ;
+        pointer-events: none;
+    }
+    .content h2 {
+        color: white;
+        font-size: 8vw;
+        z-index: 1;
+    }
+    h3 {
+        color: white;
+        font-size: 2vw;
+        text-align: center;
+    }
+    .content-titel {
+        font-size: 4vw;
+    }
+
+    /* 为图片底部的增加过滤效果 */
+    .content::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #0a2a43;
+        background: linear-gradient(to top, #0a2a43, transparent);
+        z-index: 10;
+    }
+    /* 给图片套上一个整体色调 */
+    /* .content::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color:#0a2a43;
+        mix-blend-mode: color;
+        z-index: 10;
+    } */
+</style>
+<body>
+    <div class="content">
+        <img src="./images/bg.jpg" alt="" id="bg">
+        <img src="./images/moon.png" alt="" id="moon">
+        <img src="./images/mountain.png" alt="" id="mountain">
+        <img src="./images/road.png" alt="" id="road">
+        <h2 id="text">Moon Light</h2>
+    </div>
+    <h3 class="content-titel">Lorem ipsum dolor</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eum porro laudantium placeat architecto. Explicabo aut, maxime nam nihil, est ducimus provident, iusto repellendus doloremque rerum minus tenetur doloribus tempora.</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quaerat nam labore laudantium ea aspernatur quibusdam ducimus ipsam? Dicta exercitationem velit aliquid accusantium obcaecati maiores beatae dolorem? Vel, similique minima?</h3>
+
+    <script>
+        let bg = document.getElementById("bg")
+        let moon = document.getElementById("moon")
+        let mountain = document.getElementById("mountain")
+        let road = document.getElementById("road")
+        let text = document.getElementById("text")
+
+        window.addEventListener('scroll',function () {
+            let value = window.scrollY
+            console.log(value)
+            bg.style.top = value + 0.5 +"px";
+            mountain.style.top = -value*0.15 +"px";
+            // moon没有right1属性，但是可以把值改成负数
+            moon.style.left = -value + 0.5 +"px";
+            road.style.top = value*0.15 +"px";
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+</body>
+</html>  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角形</title>
+</head>
+<body>
+    <div class="triangle"></div>
+</body>
+
+<style>
+    /* 方法1  利用css画图机制，都是通过三角形进行图形的渲染，画出一个方块，它会将方块分成四个三角形*/
+    /* .triangle{
+        width: 0;
+        height: 0;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-top: 50px solid red;
+    } */
+
+    /* 方法二 45度渐变 从起点到50% 都是透明 从50%开始到终点都是红色 */
+    .triangle{
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(45deg, transparent 50%, red 50%);
+    }
+</style>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局 大疆笔试</title>
+</head>
+<body>
+    <div class="content">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="footer"></div>
+
+    <style>
+        /* 方案一：浮动
+        .left{
+            float: left;
+            width: 500px;
+            height: calc(100vh - 200px);
+            background-color: blue;
+        }
+        .right{
+            margin-left: 500px;
+            width: calc(100vw-500px);
+            height: calc(100vh - 200px);
+            background-color: blueviolet;
+        }
+        .footer{
+            width: 100vw;
+            height: 200px;
+            background-color: antiquewhite;
+        } */
+
+        /* 方案二 flex */
+        .content{
+            display: flex;
+            /* 主轴对齐方式 */
+            /* justify-content: center;  */
+            /* 侧轴对齐方式 */
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .left{
+            background-color: aquamarine;
+            width: 500px;
+            height:calc(100vh - 200px); 
+        }
+        .right{
+            background-color: rgb(43, 87, 87);
+            height:calc(100vh - 200px); 
+            /* 默认是0 不伸 */
+            flex-grow: 1;
+        }
+        .footer{
+            width: 100vw;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+    </style>
+</body>
+</html>

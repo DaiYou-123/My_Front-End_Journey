@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+      /* 用 > 表示选择子代 */
+      /* 与后代的区别 更加注重一层一层的层级关系 */
+      /* 这是后代选择 它会把最后一个a变成同样的格式 */
+      ul li a {
+        color: red;
+        font-size: 40px;
+      }
+      /* 这是子代选择器，它只会包含当前它自己，不会望后代上寻找 */
+      ul>li>a {
+        color: aquamarine;
+        font-size: 20px;
+      }
+      .last_class>a {
+        color: blue;
+      }
+   </style>
+
+</head>
+<body>
+    <h1 id="word_title">欢迎！来到前端</h1>
+    <ul>
+      <li>
+        <a>第一节课</a>
+        <a>第二节课</a>
+        <a>第三节课</a>
+      </li>
+       
+      <li>
+        <div class="last_class">
+          <a href="#">最后一课</a>
+        </div>
+      </li>
+    </ul>
+    <hr>
+   
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写防抖</title>
+</head>
+<body>
+    <!-- // 模拟一个输入框 -->
+    <input type="text">
+    
+    <script>
+        let inp = document.querySelector("input");
+        let timer = null; // 全局的定时器
+        inp.oninput = function(){ // 获取焦点事件
+            if(timer !== null){ 
+                clearTimeout(timer);// 若再次调用 清除定时器，定时器重新开启定时
+            }
+            timer = setTimeout(()=>{
+                console.log(this.value); // 完成一次执行
+            },1000)
+        }
+
+        // 	作用：在一段时间内（n秒），如果用户持续触发某个事件，则重新启动计时器。只有在这段时间内（n秒）没有再次触发事件时，才会执行事件响应。
+        //     步骤：声明一个定时器
+        //             获得输入元素的焦点事件并开始定时判断
+        //             如果定时器不为空，说明还处于定时间隔中，定时器清零
+        //             如果定时器已满，执行目标结果
+        // 这可以使用在一些点击请求的事件上，避免因为用户的多次点击向后端发送多次请求,也可以用在一些不需要频繁保存的场景。
+
+    </script>
+</body>
+</html>

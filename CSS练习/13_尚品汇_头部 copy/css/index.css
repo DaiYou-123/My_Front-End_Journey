@@ -1,0 +1,147 @@
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* #region顶部导航条start */
+
+/* 左侧 */
+.topber {
+    background-color: #ECECEC;
+    height: 30px;
+}
+.topber-welcome {
+    height: 30px;
+    line-height: 30px;
+    /* 去除空格 */
+    font-size: 0; 
+    color: #666666;
+}
+.topber-welcome span, .topber-welcome a {
+    /* 维持文字大小 */
+    font-size: 12px;
+}
+.topber-welcome .hello{
+    margin-right: 28px;
+}
+.topber-welcome .login{
+    padding-right: 10px;
+    border-right: 1px solid  #666666;
+}
+.topber-welcome .register{
+    margin-left: 10px;
+}
+/* 右侧 */
+.topber-nav {
+    height: 30px;
+    line-height: 30px;
+    /* display: inline-block; */
+    color: #666666;
+}
+.topber-nav ul li {
+    float: left;
+}
+.topber-nav ul li a{
+    padding: 0 15px;
+    border-right: 1px solid  #666666;
+}
+/* topber-nav ul li a */
+#topber-nav-first {
+    padding-left: 0;
+}
+#topber-nav-last {
+    /* 去除最后一条线 */
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion顶部导航条end */
+
+/* #region头部start */
+.header {
+    height: 120px;
+    background-color: rgb(214, 240, 231);
+}
+.header .search {
+    /* height: 120px;
+    line-height: 120px; */
+    margin-top: 42px;
+    font-size: 0px;
+}
+.header .search input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid #DD302D;
+}
+.header .search button {
+    width: 80px;
+    height: 36px;
+    background-color: #DD302D;
+    vertical-align: top;
+    background-image: url("../image/serch_icon.png");
+    background-repeat: no-repeat;
+    background-position:  28px 6px;
+    
+}
+
+/* #endregion头部end */
+
+/* #region主导航区start */
+.main-nav {
+    height: 48px;
+    /* background-color: #666666; */
+    border-bottom: 1px solid #DD302D;
+}
+.main-nav .all-types {
+    width: 190px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #DD302D;
+    font-size: 16px;
+    color: #ffffff;
+    /* margin: 12px 48px 13px 46px; */
+}
+.main-nav .other-types {
+    height: 48px;
+    line-height: 48px;
+}
+.main-nav .other-types li {
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    margin: 0 10px;
+
+}
+/* #endregion主导航区end */
+
+/* #region内容区start */
+
+/* 侧边导航start */
+.main-container .silde-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #666666;
+}
+/* 侧边导航end */
+
+/* <!-- 中间轮播图 start --> */
+.main-container .banner {
+    width: 690px;
+    height: 458px;
+    background-color: #666666;
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+/* <!-- 中间轮播图 end--> */
+
+/* <!-- 右边区域 start --> */
+.main-container .silde-other {
+    width: 290px;
+    height: 458px;
+    background-color: #666666;
+}
+/* <!-- 右边区域 end--> */
+
+/* #endregion内容区end */
+
+

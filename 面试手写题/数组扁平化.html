@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写数组扁平</title>
+</head>
+<body>
+    <script>
+        // 1.flat API
+        const nestedArray = [1, [2, [3, [4, 5]]]];
+        const flatArray = nestedArray.flat(Infinity); // 使用 Infinity 作为参数，可以将任意深度的嵌套数组扁平化
+        console.log(flatArray); // [1, 2, 3, 4, 5]
+
+        // 数组扁平的应用场景：将多维数组变成一维数组
+        // 1.嵌套数据时，可能需要将其转换为一维数组以便于处理（感觉实际用的很少，多维肯定有存在原因的）
+    </script>
+</body>
+</html>

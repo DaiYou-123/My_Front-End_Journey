@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            border: 1px solid black;
+            margin: 100px auto;
+            position: relative;
+
+            /* 在父元素位置开启3D效果 */
+            transform-style: preserve-3d;
+            perspective: 500px;
+
+            /* 透视位置 */
+            /* perspective-origin: 300px 100px; */
+
+            
+            
+        }
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(53, 126, 190);
+          
+
+            /* transform: rotateX(45deg)  translate3D(50% ,50% ,100px); */
+            
+            transform: rotateX(45deg) ;
+
+            
+
+            /* transform: rotateX(30deg); */
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            123
+        </div>
+    </div>
+</body>
+</html>

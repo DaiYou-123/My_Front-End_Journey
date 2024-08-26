@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .outer {
+            width: 100%;
+            height: 100%;
+            background-color: aliceblue;
+            
+        }
+        .inner {
+            width: 400px;
+            height: 400px;
+            background-color: antiquewhite;
+            text-align: center;
+            line-height: 400px;
+            margin: 0 auto;
+            font-size: 40px;
+            color: white;
+            text-shadow:  0 0 10px black;
+            background-image: linear-gradient( 30deg,  rgb(211, 180, 180)   ,rgb(218rgb(161, 223, 161), 172),green   );
+        }
+        @media print {
+           .inner {
+             font-size: 80px;
+             background-image: linear-gradient( red   ,yellow,green );
+           }
+        }
+
+        @media (width:800px) {
+            .inner {
+             font-size: 80px;
+             background-image: linear-gradient( red   ,yellow,green );
+           }
+        }
+
+        @media screen and (max-width:800px) {
+            .inner {
+             font-size: 80px;
+             background-image: linear-gradient( red   ,yellow,green );
+           }
+        }
+        @media screen and (min-width:900px) {
+            .inner {
+             font-size: 80px;
+             background-image: linear-gradient( rgb(218, 63, 154)   ,rgb(65, 197, 124),rgb(129, 38, 175) );
+           }
+        }
+        
+
+        /* 查询设备屏幕的宽度 */
+        @media (device-width:1536px) {
+            .inner {
+             font-size: 80px;
+             background-image: linear-gradient( rgb(218, 63, 154)   ,rgb(65, 197, 124) );
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            你好呀!
+        </div>
+    </div>
+</body>
+</html>

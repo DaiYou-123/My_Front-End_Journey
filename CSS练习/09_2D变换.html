@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+            border: 1px solid black;
+            margin: 100px auto;
+            position: relative;
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(53, 126, 190);
+            /* transform: translate(20px, 100px); */
+
+            /* 居中 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+            /* 旋转 */
+            /* transform: rotatez(30deg); */
+
+            /* 变换原点 */
+            transform-origin: left top;
+            transform: rotatez(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            123
+        </div>
+    </div>
+</body>
+</html>

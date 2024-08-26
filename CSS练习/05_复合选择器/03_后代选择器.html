@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+      /* 用 空格 表示选择后代 */
+      /* p元素里面不能放标签等 */
+      ul li {
+        color: aqua;
+        font-size: 30px;
+      }
+      ul li a {
+        color: beige;
+        font-size: 20px;
+      }
+
+      .subject .front_end {
+        color: brown;
+        font-size: 40px;
+      }
+      .subject div.current_study {
+        color: aquamarine;
+        font-size: 20px;
+      }
+   </style>
+
+</head>
+<body>
+    <h1 id="word_title">欢迎！来到前端</h1>
+    <ul>
+        <li>第一节课</li>
+        <li>第二节课</li>
+        <li>第三节课</li>
+        <li>
+            <a href="#">最后一课</a>
+        </li>
+    </ul>
+    <hr>
+    <ol class="subject">
+        <li class="front_end">前端</li>
+        <li>后端</li>
+        <li>java</li>
+        <li>C++</li>
+        <li>
+            <div class="current_study">我目前在学前端</div>
+        </li>
+    </ol>
+</body>
+</html>

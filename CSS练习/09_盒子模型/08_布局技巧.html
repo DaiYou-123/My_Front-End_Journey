@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .div1 , .div3{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(20, 34, 34);
+            overflow: hidden;
+
+            /* 用于继承的属性 */
+            text-align: center;
+            line-height: 400px;
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(56, 179, 179);
+            padding: 50px;
+            border: solid red;
+            margin: 0 auto;
+            margin: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        span {
+            /* width: 100px;
+            height: 100px; */
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            inner
+        </div>
+    </div>
+    <div class="div3">
+        <span>我不出来玩</span>
+    </div>
+</body>
+</html>

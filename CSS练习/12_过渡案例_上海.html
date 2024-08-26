@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 225px;
+            position: relative;
+            overflow: hidden;
+        }
+        img {
+            width: 400px;
+
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .mask {
+            width: 400px;
+            height: 225px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 225px;
+            font-size: 80px;
+            color: white;
+            background-color: black;
+            opacity: 0;
+            
+            transition: 1s linear all;
+        }
+        .outer:hover .mask {
+            opacity: 0.5;
+         
+        }
+        .outer:hover img {
+            transform: scale(2.6) rotateZ(30deg) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="./bg03.jpg" alt="">
+        <div class="mask">上海</div>
+    </div>
+</body>
+</html>

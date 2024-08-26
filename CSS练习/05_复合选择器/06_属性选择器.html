@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+      /* [ ]表示 */
+      /* 属性：一些关键字 (除class、id以外，因为没有意义)*/
+     ul~p {
+      color: aqua;
+     }
+
+     /* 有关title属性全部的元素 */
+     [title] {
+      color: azure;
+     }
+
+     /* 特指 */
+     [title="some_wenzi"] {
+      color: azure;
+     }
+
+     /* ^ $ * */
+
+   </style>
+
+</head>
+<body>
+    <h1 id="word_title">欢迎！来到前端</h1>
+    <ul>
+      <li>
+        <a>第一节课</a>
+        <a>第二节课</a>
+        <a>第三节课</a>
+      </li>
+       
+      <li>
+        <div class="last_class">
+          <a href="#">最后一课</a>
+        </div>
+      </li>
+    </ul>
+    <p>文字</p>
+    <p>还是文字</p>
+    <hr>
+    <div title="wenzi">文字</div>
+    <div title="some_wenzi">文字</div>
+    <div title="wenzi">文字</div>
+   
+</body>
+</html>

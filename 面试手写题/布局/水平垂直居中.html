@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平垂直居中</title>
+</head>
+<body>
+    <div class="content">
+        <h3 class="title">
+            水平垂直居中
+        </h3>
+    </div>
+
+    <style>
+        /* 方法1：flex弹性盒子后 侧轴主轴居中*/
+        /* .content{
+            height: 100vh;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .title{
+            font-size: 200px;
+        } */
+
+        /* 方法2：定位后 减去自身盒子内容的一半 */
+        /* .content{
+            width: 50vw;
+            height: 100vh;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .title{
+            position: absolute;
+            font-size: 200px;
+            top: 50%;
+       
+            left: 50%;
+    
+           transform: translate(-50%,-50%);
+        } */
+        /* grid 网格布局 place-items 是一个简写属性，用于同时设置 align-items 和 justify-items 属性。 */
+         .content{
+            width: 50vw;
+            height: 100vh;
+            background-color: antiquewhite;
+            display: grid;
+            place-items: center;
+        }
+        .title{
+            position: absolute;
+            font-size: 200px;
+        }
+        
+    </style>
+</body>
+</html>

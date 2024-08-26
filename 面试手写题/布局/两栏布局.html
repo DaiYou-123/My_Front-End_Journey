@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两栏布局</title>
+</head>
+<body>
+   
+    <div class="content">
+        <div class="title">两栏布局</div>
+        <div class="left">
+            
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+    <style>
+        
+        .content{
+            margin: 0 100px;
+            padding: 0 100px;
+            border: 1px solid #ccc;
+            border-top: none;
+            height: 1600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .title{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            font-size: 100px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* 方法1：	让左侧的区域快浮动，然后右边的区域块用margin_left撑开 */
+        /* .left{
+            float: left;
+            width: 50%;
+            height: 800px;
+            background-color: aqua;
+        }
+        .right{
+            margin-left: 50%;
+            height: 800px;
+            background-color: aquamarine;
+        } */
+
+        /* 方法2：	使用 flex 布局（最常用） 父元素开启flex伸缩 */
+        .left{
+           
+            width: 20%;
+            background-color: aqua;
+        }
+        .right{
+           flex: 1;
+           background-color: aquamarine;
+        }
+    </style>
+</body>
+</html>

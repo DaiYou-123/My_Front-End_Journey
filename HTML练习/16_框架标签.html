@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 嵌入网页 -->
+    <!-- <iframe src="https://www.taobao.com" width="2000" height="300"></iframe>
+    <iframe src="https://www.bilibili.com" width="2000" height="300"></iframe> -->
+
+    <!-- 利用iframe嵌入广告网页 -->
+    <iframe width="2000" hight="300" src="https://pos.baidu.com/icdm?conwid=300&conhei=250&rdid=5841072&dc=3&di=u5841072&s1=429348949&s2=791835566&dri=1&dis=0&dai=19&ps=2626x1228&enu=encoding&exps=116012,110277,110273,110261,110254,110011&ant=0&psi=672af70670b04472&dcb=___adblockplus_&dtm=HTML_POST&dvi=0.0&dci=-1&dpt=none&tpr=1704543877401&ti=%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB&ari=2&ver=0830&kws=%E6%96%B0%E9%97%BB%2C%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83%2C%E6%96%B0%E9%97%BB%E9%A2%91%E9%81%93%2C%E6%97%B6%E4%BA%8B%E6%8A%A5%E9%81%93&dps=%E6%96%B0%E9%97%BB%2C%E6%96%B0%E9%97%BB%E4%B8%AD%E5%BF%83%2C%E5%8C%85%E5%90%AB%E6%9C%89%E6%97%B6%E6%94%BF%E6%96%B0%E9%97%BB%2C%E5%9B%BD%E5%86%85%E6%96%B0%E9%97%BB%2C%E5%9B%BD%E9%99%85%E6%96%B0%E9%97%BB%2C%E7%A4%BE%E4%BC%9A%E6%96%B0%E9%97%BB%2C%E6%97%B6%E4%BA%8B%E8%AF%84%E8%AE%BA%2C%E6%96%B0%E9%97%BB%E5%9B%BE%E7%89%87%2C%E6%96%B0%E9%97%BB%E4%B8%93%E9%A2%98%2C%E6%96%B0%E9%97%BB%E8%AE%BA%E5%9D%9B%2C%E5%86%9B%E4%BA%8B%2C%E5%8E%86%E5%8F%B2%2C%E7%9A%84%E4%B8%93%E4%B8%9A&dbv=2&drs=4&pcs=1857x924&pss=1857x9242&cfv=0&cpl=5&chi=1&cce=true&cec=UTF-8&tlm=1704543781&prot=2&rw=924&ltu=https%3A%2F%2Fnews.163.com%2F&ltr=https%3A%2F%2Fcn.bing.com%2F&ecd=1&dft=0&uc=1920x1032&pis=-1x-1&sr=1920x1080&tcn=1704543878&qn=be496127f6f4d29d&ft=1"></iframe>
+
+    <!-- 嵌入其他内容 -->
+    <iframe src="./01_HTML/灰太狼.jpg" ></iframe>
+
+    <br>
+    <!-- 与超链接的target属性配合使用 -->
+    <a href="https://www.bilibili.com" target="b站">看动漫</a>
+    <iframe name="b站"  width="2000" height="300" frameborder="0"></iframe>
+
+    <!-- 与表单target配合 -->
+    <form action="https://so.toutiao.com/search" target="container">
+        <input type="text" name="keyword">
+        <input type="submit" value="搜索">
+    </form>
+    <!-- 网站不支持！！！ Cannot GET /container -->
+    <iframe src="container" frameborder="0"></iframe>
+
+</body>
+</html>

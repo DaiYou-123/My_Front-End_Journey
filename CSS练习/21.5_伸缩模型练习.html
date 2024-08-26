@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+          * { 
+        font-family: Arial; 
+        font-size: 14px; 
+        margin: 0; 
+        padding: 0; 
+        border: none; 
+        }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .outer {
+            width: 100%;
+            height: 100%;
+            background-color: aliceblue;
+            background-image: url(../flex布局图片/bg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .page-header {
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 0 20px ;
+            color: white;
+      
+            display: flex;
+            /* 主轴对齐方式：左右顶死 */
+            justify-content: space-between;
+            /* 侧轴对齐方式：居中 */
+            align-items: center;
+        }
+        .page-header ul {
+            display: flex;
+        }
+        .page-header ul li a {
+            color: white;
+            font-size: 20px;
+            padding: 9px;
+            border: 1px solid white;
+            border-radius: 8px;
+            margin: 0 10px;
+        }
+        .page-header ul li:last-child a {
+            margin: 0;
+        }
+        /* 中间内容区 */
+        .page-content {
+            width: 100%;
+            height: 100%;
+            /* background-color: rgb(98, 127, 127); */
+           
+            /*方式一： position: relative; */
+            /* 方式二：display: flex; */
+            /* 方式三：使用新特性calc */
+            height: calc(100vh - 70px);
+            display: flex;
+        }
+        .page-content .content-nav {
+            width: 1000px;
+            height: 300px;
+            /* background-color: rgb(210, 247, 247); */
+            margin: 0 auto;
+            /* 方式一
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto; */
+
+            /* 方式二 */
+            /* margin: auto; */
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .page-content .item {
+            width: 180px;
+            height: 200px;
+            /* background-color: aquamarine; */
+            
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .page-content span {
+            font-size: 20px;
+            color: white;
+
+        }
+        .page-content .item1 {
+            background-color: #595CA8;
+        }
+        .page-content .item2 {
+            background-color:  #FF9D2E;
+        }
+        .page-content .item3 {
+            background-color: #01A6DE;
+        }
+        .page-content .item4 {
+            background-color: #015E91;
+        }
+        .page-content .item5 {
+            background-color: #1DC128;
+        }
+        /* .page-content .item1 {
+            background-color: #01A6DE;
+        } */
+       
+        .page-content .item:hover {
+            box-shadow: 0 0 20px;
+            /* 为什么这里选中了item（这个所有5个都带有的类），它的触发效果是单个的 */
+            transition: 0.2s 0s linear all;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+       <header class="page-header">
+        <a href="">
+            <img src="../flex布局图片/logo.png" alt="logo">
+        </a>
+        <ul>
+            <li><a href="">国内校区</a></li>
+            <li><a href="">哈哈校区</a></li>
+            <li><a href="">嘻嘻校区</a></li>
+            <li><a href="">嘿嘿校区</a></li>
+        </ul>
+       </header>
+
+       <div class="page-content">
+           <div class="content-nav">
+                <div class="item item1">
+                    <img src="../flex布局图片/item1.png" alt="邮箱">
+                    <span>我的邮箱</span>
+                </div>
+                <div class="item item2">
+                    <img src="../flex布局图片/item2.png" alt="邮箱">
+                    <span>云服务</span>
+                </div>
+                <div class="item item3">
+                    <img src="../flex布局图片/item3.png" alt="邮箱">
+                    <span>手机课堂</span>
+                </div>
+                <div class="item item4">
+                    <img src="../flex布局图片/item4.png" alt="邮箱">
+                    <span>微信服务</span>
+                </div>
+                <div class="item item5">
+                    <img src="../flex布局图片/item5.png" alt="邮箱">
+                    <span>在线客服</span>
+                </div>
+           </div>
+       </div>
+    </div>
+</body>
+</html>

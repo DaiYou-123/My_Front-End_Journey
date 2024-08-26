@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .contianer {
+            width: 400px;
+            /* 一般设置相对定位与绝对定位相配合使用 */
+            background-color: aliceblue;
+            padding: 10px;
+            position: relative;
+            
+        }
+        .div1, .div2, .div3, .div4 {
+            width: 100px;
+            height: 100px;
+        }
+        .div1 {
+            background-color: antiquewhite;
+        }
+        .div2 {
+            background-color: rgb(15, 222, 222);
+             position: relative; 
+             left: 50px;
+             top: -50px;
+             /* 可以用这个指定权重 */
+             z-index: 1;
+        }
+        .div3 {
+            background-color: rgb(68, 17, 178);
+            position: absolute;
+            left: 100px;
+            top: 100px;
+
+        }
+
+        .div4 {
+          
+            position: fixed;
+            left: 150px;
+            top: 150px;
+            background-color: rgb(132, 153, 158);
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="div1">盒子一</div>
+        <div class="div2">盒子二</div>
+        <div class="div3">盒子三</div>
+        <div class="div4">盒子四</div>
+  </div>
+</body>
+</html>

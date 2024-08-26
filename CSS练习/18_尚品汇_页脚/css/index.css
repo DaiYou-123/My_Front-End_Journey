@@ -1,0 +1,505 @@
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+/* #region顶部导航条start */
+
+/* 左侧 */
+.topber {
+    background-color: #ECECEC;
+    height: 30px;
+}
+.topber-welcome {
+    height: 30px;
+    line-height: 30px;
+    /* 去除空格 */
+    font-size: 0; 
+    color: #666666;
+}
+.topber-welcome span, .topber-welcome a {
+    /* 维持文字大小 */
+    font-size: 12px;
+}
+.topber-welcome .hello{
+    margin-right: 28px;
+}
+.topber-welcome .login{
+    padding-right: 10px;
+    border-right: 1px solid  #666666;
+}
+.topber-welcome .register{
+    margin-left: 10px;
+}
+/* 右侧 */
+.topber-nav {
+    height: 30px;
+    line-height: 30px;
+    /* display: inline-block; */
+    color: #666666;
+}
+.topber-nav ul li {
+    float: left;
+}
+.topber-nav ul li a{
+    padding: 0 15px;
+    border-right: 1px solid  #666666;
+}
+/* topber-nav ul li a */
+#topber-nav-first {
+    padding-left: 0;
+}
+#topber-nav-last {
+    /* 去除最后一条线 */
+    padding-right: 0;
+    border: 0;
+}
+/* #endregion顶部导航条end */
+
+/* #region头部start */
+.header {
+    height: 120px;
+    background-color: rgb(214, 240, 231);
+}
+.header .search {
+    /* height: 120px;
+    line-height: 120px; */
+    margin-top: 42px;
+    font-size: 0px;
+}
+.header .search input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid #DD302D;
+}
+.header .search button {
+    width: 80px;
+    height: 36px;
+    background-color: #DD302D;
+    vertical-align: top;
+    background-image: url("../image/serch_icon.png");
+    background-repeat: no-repeat;
+    background-position:  28px 6px;
+    
+}
+
+/* #endregion头部end */
+
+/* #region主导航区start */
+.main-nav {
+    height: 48px;
+    /* background-color: #666666; */
+    border-bottom: 1px solid #DD302D;
+}
+.main-nav .all-types {
+    width: 190px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #DD302D;
+    font-size: 16px;
+    color: #ffffff;
+    /* margin: 12px 48px 13px 46px; */
+}
+.main-nav .other-types {
+    height: 48px;
+    line-height: 48px;
+}
+.main-nav .other-types li {
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    margin: 0 10px;
+
+}
+/* #endregion主导航区end */
+
+/* #region内容区start */
+.main-content {
+    margin-top: 10px;
+}
+/* 侧边导航start */
+.main-content .silde-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #F4F4F4;
+    /* 二级菜单相对于爷爷定位，这样每一次二级菜单就不会移位 */
+    position: relative;
+}
+.main-content .silde-nav li {
+    font-size: 14px;
+    color: #333333;
+    /* 让行的高度充满上下，这样就不用margin padding border了 */
+    line-height: 28px; 
+    /* 如果换成margin 那整个内容区会缩小 而padding的大小在内容区里面 */
+    padding-left: 16px;
+}
+.main-content .silde-nav li:hover {
+    background-color: #DD302D;
+    
+}
+.main-content .silde-nav li:hover .second-menu{
+    display: block;
+
+}
+.main-content .silde-nav li:hover>a {
+    color:white;
+}
+.main-content .second-menu {
+    /* 一级标签和二级标签之间没有间隔 */
+    width: 680px;
+    height: 458px;
+    background-color: white;
+    position: absolute;
+    left: 190px;
+    top: 0;
+    padding-left: 20px;
+    display: none;
+
+}
+.main-content .silde-nav li dt {
+    float: left;
+    width: 70px;
+    height: 20px;
+    
+    padding-right: 10px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bolder;
+}
+.main-content .silde-nav li dl {
+    height: 36px;
+    width: 670px;
+    line-height: 36px;
+}
+.main-content .silde-nav li dd {
+    float: left;
+    color: #000000;
+    font-size: 14px;
+    
+}
+.main-content .silde-nav li dd a {
+    padding: 0 9px;
+    border-left: 1px solid black;
+}
+.main-content .silde-nav li dl:first-of-type {
+    margin-top: 10px;
+}
+
+/* 侧边导航end */
+
+/* <!-- 中间轮播图 start --> */
+.main-content .banner {
+    width: 690px;
+    height: 458px;
+    background-color: #666666;
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+/* <!-- 中间轮播图 end--> */
+
+/* <!-- 右边区域 start --> */
+.main-content .silde-other {
+    width: 290px;
+    height: 458px;
+    /* background-color: #666666; */
+}
+.main-content .silde-other .massage {
+    width: 260px;
+    height: 156px;
+    border: 1px #D9D9D9 solid;
+    padding: 0 14px;
+} 
+.main-content .silde-other .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.main-content .silde-other .title span {
+    font-size: 14px;
+    font-weight: bolder;
+}
+.main-content .silde-other .list ul li {
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    /* background-color: #eae1e1; */
+    /* 不需要margin的调整文字之间的宽高，直接把行高设置成想要的大小就行了 */
+   /* margin: 6px 0; */
+} 
+
+.main-content .silde-other .other-nav {
+    width: 280px;
+    height: 258px;
+    /* background-color: #666666; */
+    margin-top: 10px;
+    padding:16px 5px ;
+    /* 只是光标变了，想要跳转还是得a标签 */
+    cursor: pointer;
+} 
+.main-content .silde-other .other-nav ul li {
+    width: 48px;
+    height: 70px;
+    /* background-color: #e9e0e0; */
+    margin: 0 11px;
+    /* span在容器里面，我们需要对li进行设置，因为li包含它 */
+    text-align: center;
+}
+.main-content .silde-other .other-nav ul:nth-of-type(2) {
+    
+    margin-top:17px;
+    margin-bottom: 17px;
+}
+.main-content .silde-other .other-nav .picture {
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+}
+.main-content .silde-other .other-nav ul:nth-child(1) li:nth-child(1) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: 0 0;
+}
+.main-content .silde-other .other-nav ul:nth-child(1) li:nth-child(2) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -48px 0;
+}
+.main-content .silde-other .other-nav ul:nth-child(1) li:nth-child(3) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -96px 0;
+}
+.main-content .silde-other .other-nav ul:nth-child(1) li:nth-child(4) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -144px 0;
+}
+.main-content .silde-other .other-nav ul:nth-child(2) li:nth-child(1) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: 0 -48px;
+}
+.main-content .silde-other .other-nav ul:nth-child(2) li:nth-child(2) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -48px -48px;
+}
+.main-content .silde-other .other-nav ul:nth-child(2) li:nth-child(3) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -96px -48px;
+}
+.main-content .silde-other .other-nav ul:nth-child(2) li:nth-child(4) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -144px -48px;
+}
+.main-content .silde-other .other-nav ul:nth-child(3) li:nth-child(1) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: 0 -96px;
+}
+.main-content .silde-other .other-nav ul:nth-child(3) li:nth-child(2) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -48px -96px;
+}
+.main-content .silde-other .other-nav ul:nth-child(3) li:nth-child(3) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -96px -96px;
+}
+.main-content .silde-other .other-nav ul:nth-child(3) li:nth-child(4) .picture {
+   
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/精灵图-侧边功能.png);
+    background-position: -144px -96px;
+}
+/* <!-- 右边区域 end--> */
+
+/* #endregion内容区end */
+
+/* #region秒杀区start */
+.seckill img {
+    float: left;
+    margin-right: 11px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.seckill img:last-child {
+    margin-right: 0px;
+}
+
+/* #endregion秒杀区end */
+
+/* #region楼层start */
+/* <!--上 楼层导航 --> */
+.floor .floor-nav {
+    height: 30px;
+    margin-top: 48px;
+    border-bottom: #DD302D 4px solid;
+    line-height: 30px;
+}
+.floor .floor-nav ul li{
+    /* ul右飘，但是里面得li左飘; */
+   float: left;
+   font-size: 14px;
+   color: #666666;
+}
+.floor .floor-nav span{
+    font-size: 20px;
+}
+.floor .floor-nav ul li a{
+    padding: 0 10px;
+    border-right: 1px solid #000000;
+}
+.floor .floor-nav ul li:first-child a{
+    color: #DD302D;
+    padding-left: 0;
+}
+.floor .floor-nav ul li:last-child a{
+    padding-right: 0 ;
+    border-right: 0px solid ;
+}
+
+/* <!--下 楼层信息 --> */
+.floor-info div {
+    float: left;
+    height: 432px;
+    /* background-color: #ef1818; */
+}
+.floor-info .item1 {
+    width: 230px;
+    background-color: #F4F4F4;
+}
+.floor-info .item2 {
+    width: 340px;
+}
+.floor-info .item3 {
+    width: 206px;
+}
+.floor-info .item3 img,
+.floor-info .item4 img,
+.floor-info .item5 img {
+    border-bottom: #E2E2E2 1px solid;
+}
+.floor-info .item4 {
+    width: 206px;
+    border-left:1px solid #E2E2E2;
+    border-right:1px solid #E2E2E2;
+}
+.floor-info .item5 {
+    width: 206px; 
+}
+.floor-info .item1 .list-nav{
+    padding: 20px;
+    height: 108px;
+    width: 190px;
+    /* background-color: #DD302D; */
+    margin-bottom: 15px;
+}
+.floor-info .item1 .list-nav ul li{
+    width: 90px;
+    height: 22px;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid #D9D9D9;
+    font-size: 16px;
+ 
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 14.4px;
+}
+.floor-info .item1 .list-nav ul li:nth-child(2n-1) {
+    margin-right: 10px;
+}
+.floor-info .item1 img {
+    /* background-color: aqua; */
+    padding: 20px;
+}
+
+/* #endregion楼层end */
+
+/* #region页脚start */
+.footer {
+    height: 440px;
+    background-color: #483E3E;
+    margin-top: 48px;
+    overflow: hidden;
+}
+.footer .top-links {
+    width: 1190px;
+    height: 156px;
+    margin-top: 48px;
+    /* background-color: #c8b3f6; */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #584D4D;
+}
+.footer .top-links .links-list {
+    width: 190px;
+    height: 176px;
+    float: left;
+    margin-right: 10px;
+}
+.footer .top-links .links-list:last-child {
+    margin-right: 0;
+}
+.footer .top-links .links-list li a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.bottom-links {
+    /* 浮动以后没有用了 */
+    text-align: center;
+    /* 而且这个居中属性要用在父亲容器上 */
+}
+.bottom-links .bottom-links-list {
+    margin-top: 47px;
+    /* background-color: #666666; */
+    /* 将浮动后的块元素变成行内 */
+    display: inline-block;
+   
+}
+.bottom-links .bottom-links-list li {
+    float: left;
+}
+.bottom-links .bottom-links-list li a {
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 0 26px;
+    border-right: 1px solid #D9D9D9;
+}
+.bottom-links .bottom-links-list li:last-child a {
+    border: 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+/* #endregion页脚end */

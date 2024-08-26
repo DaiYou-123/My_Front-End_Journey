@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2D {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            text-align: center;
+            line-height: 200px;
+            /* 设置需要过度的属性 all可以让所有能过渡的属性都生效*/
+            transition-property: width ,height ,background-color;
+            /* 设置持续时间 */
+            transition-duration: 1s, 1s, 3s;
+        }
+        .div2D:hover {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(205, 229, 172);
+            transform: translate(50%,50%) scale(1.5, 1.5) rotateZ(45deg) ;
+            box-shadow: 0 0 10px 10px rgb(183, 206, 150);
+           
+            /* opacity: 0.5; */
+        }
+
+        .div3D {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border: 1px solid ;
+
+            /* 开启3D变换 */
+            transform-style: preserve-3d;
+            perspective: 200px;
+
+
+        }
+        .div3D .div1 {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: rgb(199, 184, 214);
+
+            
+
+            /* 设置需要过渡的属性（自己元素） */
+            transition-property: all;
+            transition-duration: 3s;
+        }
+        .div3D .div1:hover {
+            /* 鼠标移动上来 */
+            transform: rotate3d(1,1,1,90deg) scaleX(1.5);
+            background-color: rgb(4, 4, 146);
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div2D">
+        123
+    </div>
+
+    <div class="div3D">
+        <div class="div1">
+            123
+        </div>
+    </div>
+</body>
+</html>

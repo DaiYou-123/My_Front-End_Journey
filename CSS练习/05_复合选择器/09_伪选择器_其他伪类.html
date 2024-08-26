@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   <style>
+    /* div>p:not(.last_two) {
+        color: aquamarine;
+        font-size: 30px;
+    } */
+    /* div>p:not([title^="two"]) {
+        color: aquamarine;
+        font-size: 30px;
+    } */
+    div>p:not(:first-of-type) {
+        color: aquamarine;
+        font-size: 10px;
+    }
+
+    /* UI */
+    input:checked {
+        /* color: aquamarine;
+        font-size: 30px;
+        这两个元素不起作用 */
+        width: 30px;
+        height: 30px;
+    }
+    input:disabled {
+        color: blue;
+        background: #000;
+    }
+    input {
+        color: antiquewhite;
+        background: #e91d1d;
+    }
+   </style>
+
+</head>
+<body>
+    <!-- 结构三 -->
+    <div class="rank_div_last">
+        <span>干扰第一个</span>
+        <p>第1个</p>
+        <p>第2个</p>
+        <p>第3个</p>
+        <p>第4个</p>
+        <p>第5个</p>
+        <p>第6个</p>
+        <p>第7个</p>
+        <p>第8个</p>
+        <p class="last_two" title="two_last">第9个</p>
+        <p class="last_two" >第10个</p>
+        <hr>
+
+        <!-- UI伪类 -->
+        <input type="text">
+        <input type="text" disabled>
+        <input type="checkbox">
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <style>
+        body {
+            /* 默认宽度就是整个 */
+            /* width: calc(100vh); */
+            height: calc(100vh);
+            display: flex;
+           
+            
+        }
+        .mian {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            /* text-align: center; */
+            /* line-height: 300px; */
+            /* background-color: red; */
+            /* margin: auto; */
+             margin: auto;
+
+             display: flex;
+             justify-content: center;
+             text-align: center;
+
+             border-radius: 50%;
+             position: relative;
+             /* 使用阴影加上了边框（外延15px） 刚好覆盖*/
+             box-shadow:  0 0 0 15px red;
+            
+           
+        }
+        .mian::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: -1;
+            position: absolute;
+            transform: rotate(45deg);
+            
+        }
+        .content {
+            color: rgb(12, 11, 11);
+            font-size: 14px;
+            margin: auto;
+        }
+
+        .mian:hover {
+            border-radius: 0;
+            transition: 0.2s linear all;
+        }
+        .mian:hover .content {
+            z-index: 1;
+            transition: 0.2 linear all;
+            box-shadow: 0 0 50px rgba(62, 52, 52, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mian">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam illo excepturi harum libero nulla, temporibus sit beatae delectus itaque incidunt modi perferendis nihil blanditiis commodi asperiores est eum, eligendi inventore.
+        </div>
+    </div>
+</body>
+</html>

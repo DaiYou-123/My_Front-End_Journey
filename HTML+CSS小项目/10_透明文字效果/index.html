@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <style>
+    
+        .main {
+            width: 100%;
+            height: calc(100vh);
+            background-image: url(./OIP-C\ \(2\).jpg);
+            background-size: cover;
+
+            
+            position: relative;
+        }
+
+        .main h1 {
+            /* width: 100%; */
+            height: calc(50%);
+            font-size: 8em;
+            text-transform: uppercase;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+            padding: 20px;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+            /* 属性mix-blend-mode 可以让元素的背景和父亲元素的背景以何种混合的模式展现
+            有如下属性：
+            normal：正常
+            multiply：正片叠底
+            screen：滤色
+            overlay：叠加
+            darken：变暗
+            lighten：变亮
+            color-dodge：颜色减淡
+            color-burn：颜色加深
+            hard-light：强光
+            soft-light：柔光
+            difference：差值
+            exclusion：排除
+            hue：色相
+            saturation：饱和度
+            color：颜色
+            luminosity：亮度
+            initial：初始
+            inherit：继承
+            unset：复原
+
+            作者：馒头老爸
+            链接：https://juejin.cn/post/6902297128773779469 */
+
+            mix-blend-mode: overlay;
+            box-shadow: 0 5px 10px rgba(168, 220, 105, 0.5);
+            background-color: rgba(157, 154, 2, 0.2);
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <h1>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, exercitationem.
+       </h1>
+    </div>
+</body>
+</html>
