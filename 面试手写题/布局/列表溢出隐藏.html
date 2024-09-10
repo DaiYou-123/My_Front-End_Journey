@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表溢出隐藏</title>
+</head>
+
+<body>
+    <div class="contianer">
+        <div id="content">
+            <!-- <div class="item"></div> -->
+
+        </div>
+    </div>
+    <button id="addOne">添加</button>
+    <div id="count"></div>
+    <script>
+        const itemALL = [];
+        const itemArr = [];
+        let itemCount = [];
+        const content = document.getElementById("content");
+        const Count = document.getElementById("count");
+        // 创建元素
+        for (let i = 0; i < 20; i++) {
+            // let item = {
+            //     text:'item'+i,
+            //     height:Math.random()*30 + 30 +"px",
+            // }
+            const newElement = document.createElement("div")
+            newElement.classList.add('item');
+            newElement.textContent = 'item' + i;
+            // 高度不一致
+            newElement.style.height = Math.random() * 100 + 30 + "px";
+            content.appendChild(newElement);
+            itemALL.push(newElement);
+            //   itemArr.push(newElement);
+        }
+
+        function creatObserver() {
+            // 监听元素的信息
+            let lastIndex = 0; // 定义过渡元素的位置
+            const observer = new IntersectionObserver((entries) => {
+                // 观察全部列表元素，从中找到过渡边缘元素
+                console.log("entry", entries);
+
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        lastIndex = index; // 停留在最后一个true
+                        console.log("lastIndex", lastIndex);
+                    }
+                })
+                // 最后一个元素是否100%显示，
+                if (entries[lastIndex]?.intersectionRatio < 1) { // 先判断是否存在，因为有两次调用
+                    lastIndex -= 1;
+                }
+                if (lastIndex < itemCount - 1) { // 说明 溢出了
+                    let _arr = itemALL.slice(0, lastIndex);
+                    // 替换最后的元素 为显示隐藏的个数，
+                    itemList[lastIndex].textContent = "剩余元素" + (itemCount - lastIndex);
+                    // 显示前 lastIndex -1 个元素
+                    for (var i = 0; i < itemCount; i++) {
+                        if (i <= lastIndex) {
+                            itemList[i].style.display = 'block'; // 显示前n-1个元素
+                        } else {
+                            itemList[i].style.display = 'none'; // 隐藏其他元素
+                        }
+                    }
+
+                }
+            })
+            const itemList = document.getElementsByClassName('item');
+
+            // 显示总数
+            itemCount = itemList.length;
+            Count.innerHTML = '总数: ' + itemCount;
+
+            for (let index = 0; index < itemList.length; index++) {
+                observer.observe(itemList[index]) // 观察每一项 执行回调
+
+            }
+        }
+        creatObserver();
+        // 添加元素
+        const buttom = document.getElementById("addOne")
+        buttom.addEventListener('click', () => {
+            console.log("add");
+            const newElement = document.createElement("div")
+            newElement.classList.add('item');
+            newElement.textContent = 'newItem';
+            // 高度不一致
+            newElement.style.height = Math.random() * 100 + 30 + "px";
+            content.prepend(newElement);
+
+            creatObserver();
+        })
+
+
+    </script>
+    <style>
+        .contianer {
+            width: 50vw;
+            height: 500px;
+            overflow: hidden;
+            border: solid 2px rgb(46, 159, 67);
+        }
+
+        #content {
+            margin: 10px;
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+
+        .item {
+            margin: 10px 0;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</body>
+
+</html>
