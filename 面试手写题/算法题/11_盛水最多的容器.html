@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        height = [1,8,6,2,5,4,8,3,7];
+
+        let left = 0;
+        let right = height.length - 1;
+        let maxArea = 0;
+        height.forEach(element => {
+            if(right > left){
+                let currentArea = (right - left)*Math.min(height[left],height[right]); // 计算面积
+                maxArea = Math.max(maxArea,currentArea);
+                console.log(maxArea);
+            }
+            if(height[left]>height[right]){ // 两边向中间靠拢
+                right -- ;
+            }else{
+                left ++ ;
+            }
+        });
+    </script>
+</body>
+</html>

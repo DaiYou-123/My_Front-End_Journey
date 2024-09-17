@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+        const map = new Map; // 键 存放字母标志 值 存放集合
+        let result = [];
+        for(let i=0; i<strs.length; i++){
+
+            // 数据先清理一遍，按照字母顺序排序，后面一遍比较就行了
+            console.log('清洗前',strs[i]);
+            let array = Array.from(strs[i]); // 转化为数组
+            let temp = array.sort(); // 排序
+            temp = temp.join(''); // 转化回字符
+
+            console.log("清洗后",temp);
+            
+            //判断键入
+            if(map.has(temp)){ // 如果有相同的键 加入值
+                let temp1 = map.get(temp);
+                console.log('ceshi---',temp1);
+                map.set(temp,[ ...map.get(temp), strs[i] ])
+               
+            }
+            else{ // 如果没有出现过 新增一对键值
+                map.set(temp,[strs[i]])
+                console.log(map);
+            }
+            
+          
+        }
+
+        map.forEach((value,key)=>{
+                result.push(value);
+        })
+        console.log("结果----",result);
+    </script>
+</body>
+</html>

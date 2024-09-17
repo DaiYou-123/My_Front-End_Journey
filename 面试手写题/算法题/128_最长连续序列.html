@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nums = [9,1,4,7,3,-1,0,5,8,-1,6]
+        // 转化成set 方便找查和去重
+        const set = new Set(nums); 
+        nums = [...set];
+        console.log(nums);
+        let max = 0;
+
+        const result = [];
+      
+        for (let index = 0; index < nums.length; index++) {
+            let temp = nums[index];
+            let count = 1;
+            if(set.has(temp-1)){continue}
+            while(set.has(temp+1)){
+                // if( set.has(temp - 1) && set.has(temp + 1)) { // 中间值 加入
+                //     result.push(temp);
+                // }
+                temp ++;
+                count ++;
+            }
+           max = Math.max(max,count)
+         
+            console.log("结果",max);
+        }
+        
+    </script>
+</body>
+</html>

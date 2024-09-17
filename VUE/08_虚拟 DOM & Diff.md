@@ -1,5 +1,5 @@
 
-虚拟 DOM 为一个树形结构的 JavaScript 对象，Vue 虚拟 DOM 的实现参考 `snabbdom.js` 和 `inferno.js`，其核心是在 JavaScript 模拟 DOM 树，它为解决浏览器性能问题应运而生，状态更新反映在虚拟 DOM 上，操作内存中的 JS 对象显然更快，等批量更新后，将虚拟 DOM 映射为真实 DOM，再由浏览器渲染，通过 Diff 算法比较新旧虚拟 DOM 树中节点的差异，并根据差异对真实 DOM 进行最小量更新。虚拟 DOM 抽象浏览器渲染过程，实现跨平台的能力，不再局限于浏览器 DOM，也可以是小程序、Android 和 iOS 的原生组件等
+虚拟 DOM 为一个树形结构的 JavaScript 对象，Vue 虚拟 DOM 的实现参考 `snabbdom.js` 和 `inferno.js`，其核心是在 JavaScript 模拟 DOM 树，它为解决浏览器性能问题应运而生(减少重绘和节流)，状态更新反映在虚拟 DOM 上，操作内存中的 JS 对象显然更快，等批量更新后，将虚拟 DOM 映射为真实 DOM，再由浏览器渲染，通过 Diff 算法比较新旧虚拟 DOM 树中节点的差异，并根据差异对真实 DOM 进行最小量更新。虚拟 DOM 抽象浏览器渲染过程，实现跨平台的能力，不再局限于浏览器 DOM，也可以是小程序、Android 和 iOS 的原生组件等
 
 `h` 函数即 Vue `render` 方法中的 `createElement` 和 `React.createElement`，Vue 通过 vue-loader 将 template 转换为 `h` 函数，React 通过 babel 将 JSX 转换为 `h` 函数
 

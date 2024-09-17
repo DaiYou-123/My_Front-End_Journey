@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let  s = "abab", p = "ab";
+        p = p.split('').sort().join('');
+        let result = [];
+
+        for(let index = 0; index < s.length - p.length +1; index++) {
+            // 取出p长度的元素 转数组 排序 转字符 
+            let temp = s.slice(index,index+p.length).split('').sort().join('');
+            console.log(temp);
+            // 判断是否相等
+            if(temp == p){
+                result.push(index);
+            }
+           
+        }
+    </script>
+</body>
+</html>

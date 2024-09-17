@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    let  arrs = [2,7,11,15,15]
+    const traget = 9;
+    const map = new Map();
+
+    for(let i = 0; i< arrs.length; i++){
+        // // 需要找的另一个数
+        // let temp = traget - arrs[i];
+        // console.log("ceshi",temp);
+        // // 找到索引
+        // let find_Index =  arrs.findIndex(item => item == temp )
+        // if(find_Index >= 0){
+        //     console.log(i,find_Index);
+        //     return i ,find_Index
+        // }
+        
+        let temp = traget - arrs[i];
+        if(map.has(temp)){ // 如果这个map里面已经存了另一个值，说明在之前的数里面有互补的数
+            return [ map.get(temp),i,] ; // 返回下表
+        }
+        map.set(arrs[i],i);
+        console.log(map);
+    }
+    </script>
+</body>
+</html>
