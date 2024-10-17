@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var candy = function(ratings){
+            const len = ratings.length;
+            let sum  = len;
+            let left = [];
+            let right = [];
+            // 找出左边大的
+            for(let index = 0; index < len -1; index++) {
+                if( ratings[index] > ratings[index +1]){
+                    left[index] = 1;
+                }else{
+                    left[index] = 0;    
+                }
+            }
+            left[len - 1]= 0;
+            right[0] = 0;
+            console.log( left);
+            // 右边大的 中间有几率重复需要比较一下
+            for (let j = len-1; j >= 0; j--) {
+                if(ratings [j] > ratings[j - 1]){
+                    right[j] = 1;
+                }else{
+                    right[j] = 0;
+                }
+              
+                    sum  += Math.max(left[j],right[j]);
+                    console.log(sum);
+              
+                console.log( right[j]);
+                
+            }
+            console.log( right);
+            return sum;
+        }
+
+        const  nums = [1 ,3 ,2];
+        let count = candy(nums);
+        console.log(count);
+    </script>
+</body>
+</html>

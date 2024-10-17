@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duixing</title>
+</head>
+<body>
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+
+    <div class="shape3"></div>
+    
+</body>
+
+<style>
+    /* 方法1  两个 压缩后的菱形（平行四边型）*/
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .shape1 {
+        width: 200px;
+        height: 200px;
+        margin-left: 100px;
+        margin-top: 100px;
+        background-color: antiquewhite;
+        transform: skew(20deg) rotate(20deg);
+    }
+    .shape2 {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        margin-left: 300px;
+        margin-top: 100px;
+        background-color: antiquewhite;
+        transform:  scaleY(-1) skew(20deg) rotate(20deg);
+    }
+    
+   
+    /* 方法二 使用border */
+    .shape3::before {
+        content: "";
+        position: absolute;
+        top: -40px          ;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 70px solid blue;
+        border-right: 70px solid blue;
+        border-top: 40px solid transparent;
+    }
+    .shape3 {
+        width: 140px;
+        height: 40px;
+        background-color: blue;
+        position: relative;
+    }
+    .shape3::after{
+        content: "";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        border-top: 40px solid blue ;
+    }
+    
+</style>
+</html>

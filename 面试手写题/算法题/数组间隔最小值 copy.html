@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 算法:有一个包含N个整数的数组，请编写一个算法，找出其中的两个元素，使他们之差最小。越快越好， -->
+
+    <script>
+        // 思路，先排序，然后计算相邻之间的差值
+
+        function findMinDifference(_arr){
+            // 排序
+            arr.sort((a,b)=>{a - b})
+            console.log(arr);
+            // 相邻比较
+
+            let minValue = arr[1] - arr[0]; //初始值
+            for(let i = 1 ; i <= arr.length ; i++){
+                let tempValue = Math.abs([i] - arr[i-1]);
+                if(tempValue < minValue){ // 更新
+                    minValue = tempValue;
+                } 
+            }
+
+            return minValue;
+        }
+        const arr = [1, 5, 3, 19, 18, 19];
+        console.log("最小差值是:", findMinDifference(arr));
+
+    </script>
+</body>
+</html>
