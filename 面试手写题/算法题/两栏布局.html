@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contianer">
+        <div class="left"></div>
+        <div class="right">
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <style>
+        /* .contianer{
+            height: 100vh;
+            width: 100vw;
+        } */
+        /* .left {
+            position: fixed;
+            background-color: aqua;
+            width: 200px;
+            height:100vh;
+        }
+        .right{
+            
+            background-color: rgb(13, 18, 16);
+            margin-left: 200px;
+            width: calc(100vw - 200px);
+            height:100vh;
+        } */
+
+        .contianer{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+        .left {
+          width: 200px;
+          height: 100vh;
+          background-color: aqua;
+        }
+        .right{
+            height: 100vh; 
+            flex: none;
+            background-color: rgb(8, 10, 10);
+        }
+    </style>
+</body>
+</html>

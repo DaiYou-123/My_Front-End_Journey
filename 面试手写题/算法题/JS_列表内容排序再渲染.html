@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+  <ul id="myList">
+    <li id="item1">项目 1</li>
+    <li id="item3">项目 3</li>
+    <li id="item2">项目 2</li>
+    <li id="item4">项目 4</li>
+  </ul>
+
+  <script>
+    function sortAndReturnTextContent() {
+      const items = document.getElementById('myList').children;
+      // 在此补全代码
+      // 排序后的字符数组
+      let newItems = Array.from(items).sort((a,b)=>{
+            return a.id>b.id? 1:-1;
+       });
+       // 取出按照顺序的HTML（包括HTML标签和文本）
+       let newInnerText = newItems.map((ele)=>{
+            return ele.outerHTML;
+       })
+       // 整体替换HTML
+       return document.getElementById('myList').innerHTML= newInnerText.join('')
+    }
+    sortAndReturnTextContent()
+  </script>
+
+
+
+</body>
+
+</html>

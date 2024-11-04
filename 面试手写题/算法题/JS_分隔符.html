@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+       /* 填写样式 */
+    </style>
+</head>
+
+<body>
+    <!-- 填写标签 -->
+    <script type="text/javascript">
+        // 填写JavaScript
+       
+
+function _comma(number) {
+                // 补全代码
+                // let num = Math.floor(Number(number)/100); 
+                // let numArr = String(num).length - 1;
+               
+                // let a =  number.split('');
+                // a.splice(numArr,0,',');
+                // let Str = a.join('');
+
+                let numberArr = String(number).split('').reverse(); // 转换为字符数组 翻转
+                console.log(numberArr);
+                let numLength = String(number).length; 
+                numLength = number>=0? numLength:numLength-1;
+                console.log(numLength);
+                let index = 0; 
+                for(let i = 0; i< numLength; i++){
+                    if( (i+1)%3 === 0 && i+1 !=numLength){
+                        index++;
+                        numberArr.splice(i+index,0,',')
+                        console.log(numberArr);
+                    }
+                }
+                return numberArr.reverse(0).join('');
+            }
+            console.log(_comma(-123));
+            
+    </script>
+</body>
+
+</html>

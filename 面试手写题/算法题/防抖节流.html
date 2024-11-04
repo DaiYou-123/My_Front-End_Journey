@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+
+        // 防抖
+        let  timer;
+        let input = document.getElementById("input")
+        input.oninput  = function (){
+            if(timer !== null){ // 判断是否为0
+                clearTimeout(timer); // 清除定时器
+            }
+            timer = setTimeout(() => {
+                console.log(123);
+             }, 500);
+        }
+         
+
+    </script>
+</body>
+</html>
