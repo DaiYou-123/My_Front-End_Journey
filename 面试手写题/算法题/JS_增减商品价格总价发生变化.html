@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+    </head>
+    <body>
+    	<table>
+            <thead>
+                <caption>
+                    商品
+                </caption>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>炸鸡</td>
+                    <td>28元</td>
+                    <td><button id="zjtaiduola">-</button></td>
+                    <td><span id="zjsl">0</span></td>
+                    <td><button id="zjtaishaola">+</button></td>
+                </tr>
+                <tr>
+                    <td>可乐</td>
+                    <td>5元</td>
+                    <td><button id="kltaiduola">-</button></td>
+                    <td><span id="klsl">0</span></td>
+                    <td><button id="kltaishaola">+</button></td>
+                </tr>
+                <tr>
+                    <td>总价：</td>
+                    <td><span id="total">0</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <script type="text/javascript">
+            // 补全代码
+            
+            // 商品按钮
+            const zjtaiduola = document.getElementById('zjtaiduola');
+            const zjtaishaola = document.getElementById('zjtaishaola');
+
+            const kltaiduola = document.getElementById('kltaiduola');
+            const kltaishaola = document.getElementById('kltaishaola');
+            //商品数量
+            const zjsl = document.getElementById('zjsl');
+            const klsl = document.getElementById('klsl');
+            // 商品总价格
+            const total = document.getElementById('total');
+            // 调用重新渲染出总价格
+            render = ()=>{
+                let allValue= 0;
+                let zjValue = 28* Number(zjsl.innerText);
+                let klValue = 5*Number(klsl.innerText);
+                allValue = zjValue + klValue;
+                total.innerText = allValue;
+            }
+            zjtaiduola.onclick = ()=>{
+                if(Number(zjsl.innerText)>0){
+                    zjsl.innerText = Number(zjsl.innerText) -1 ;
+                }
+                reder();
+            }
+            zjtaishaola.onclick = ()=>{
+                zjsl.innerText = Number(zjsl.innerText) + 1;
+                render();
+            }
+            kltaiduola.onclick = ()=>{
+                if(Number(klsl.innerText)>0){
+                    klsl.innerText = Number(klsl.innerText) -1 ;
+                }
+                render();
+            }
+            kltaishaola.onclick = ()=>{
+                klsl.innerText = Number(klsl.innerText) + 1;
+                render();
+            }
+
+        </script>
+    </body>
+</html>

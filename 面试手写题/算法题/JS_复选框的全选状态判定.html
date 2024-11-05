@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+        <style>
+            ul {
+                list-style: none;
+            }
+        </style>
+    <body>
+        <ul>
+            <li>全选<input type='checkbox' id='all'></li>
+            <li>Java<input type='checkbox' class='item'></li>
+            <li>javaScript<input type='checkbox' class='item'></li>
+            <li>C++<input type='checkbox' class='item'></li>
+            <li>python<input type='checkbox' class='item'></li>
+            <li>.net<input type='checkbox' class='item'></li>
+        </ul>
+
+        <script>
+            // 补全代码
+            let all = document.getElementById('all');
+            let options =  Array.from(document.querySelectorAll(".item"));
+            // 全选的复选框控制与其他复选框
+            all.onchange = ()=>{
+                options.forEach((item)=>{
+                    item.checked = all.checked;
+                })
+            }
+            // 其他复选框的状态变化与全选复选框之间
+            // 方法一
+            // options.forEach((item)=>{ // 遍历出子框，方便挂载事件
+            //     item.onchange = () =>{ // 监听每一个小复选框 一次
+            //         let isCheckAll = true; // 
+            //         options.forEach((item)=>{ // 判断全部子框是否全部被选中 五次 
+            //             if(item.checked == false){
+            //                 isCheckAll = false;
+            //             }
+            //         })
+            //         all.checked = isCheckAll;
+            //     }  
+            // })
+
+            //方法2 使用every 原理基本一样
+            options.forEach((item)=>{
+                item.onchange = ()=>{
+                    all.checked = options.every(x => x.checked)
+                }
+            })
+        </script>
+    </body>
+</html>

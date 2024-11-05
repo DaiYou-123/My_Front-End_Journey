@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+    </head>
+    <body>
+    	<ul id="ul">
+            
+        </ul>
+        <script type="text/javascript">
+            const _createPage = (allItem, pageItem) => {
+                // 补全代码 输出： "li"长度为7，"li"内容依次为"1","2","3","4","5","6","7"
+                const pages = Math.ceil(allItem/pageItem);
+                let seg = document.createDocumentFragment();
+                for(let i = 1; i<= pages; i++){
+                    let li = document.createElement('li');
+                    li.innerHTML = `${i}`;
+                    seg.append(li);
+                }
+                let ul = document.getElementById('ul');
+                ul.appendChild(seg);
+            }
+           _createPage(13, 4) 
+
+        </script>
+    </body>
+</html>
